@@ -107,37 +107,37 @@
 # plt.show()
 
 # #https://www.bilibili.com/read/cv11339746
-import os
-import numpy as np
-import matplotlib.pyplot as plt
-import imageio
+# import os
+# import numpy as np
+# import matplotlib.pyplot as plt
+# import imageio
 
-# 生成40个取值在30-40的数
-y = np.random.randint(30, 40, size=(10)) 
+# # 生成40个取值在30-40的数
+# y = np.random.randint(30, 40, size=(10)) 
 
-filenames = []
-num = 0
-for i in y:
-    num += 1
-    # 绘制40张折线图
-    plt.plot(y[:num])
-    plt.ylim(20, 50)
+# filenames = []
+# num = 0
+# for i in y:
+#     num += 1
+#     # 绘制40张折线图
+#     plt.plot(y[:num])
+#     plt.ylim(20, 50)
 
-    # 保存图片文件
-    filename = f'{num}.png'
-    filenames.append(filename)
-    plt.savefig(filename)
-    plt.close()
+#     # 保存图片文件
+#     filename = f'{num}.png'
+#     filenames.append(filename)
+#     plt.savefig(filename)
+#     plt.close()
 
-# 生成gif
-with imageio.get_writer('mygif.gif', mode='I') as writer:
-    for filename in filenames:
-        image = imageio.imread(filename)
-        writer.append_data(image)
+# # 生成gif
+# with imageio.get_writer('mygif.gif', mode='I') as writer:
+#     for filename in filenames:
+#         image = imageio.imread(filename)
+#         writer.append_data(image)
 
-# 删除40张折线图
-for filename in set(filenames):
-    os.remove(filename) 
+# # 删除40张折线图
+# for filename in set(filenames):
+#     os.remove(filename) 
 
 # # https://zhuanlan.zhihu.com/p/139084960
 # import matplotlib.animation as ani
