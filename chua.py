@@ -3,7 +3,7 @@ from scipy.integrate import odeint,solve_ivp
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-def Chua_fun(t,state):
+def chua_fun(t,state):
     # https://stackoverflow.com/questions/61127919/chuas-circuit-using-python-and-graphing
     # parameters
     alpha = 15.395
@@ -30,8 +30,8 @@ t = np.arange(t_0, t_final, dt)
 # initial conditions
 u0 = [0.1,0,0]
 # integrate ode system
-sol = odeint(Chua_fun, u0, t, tfirst=True)
-soln = solve_ivp(Chua_fun, [t_0, t_final], u0, dense_output=True)
+sol = odeint(chua_fun, u0, t, tfirst=True)
+soln = solve_ivp(chua_fun, [t_0, t_final], u0, dense_output=True)
 x, y, z = soln.sol(t)
 x2, y2, z2 = soln.y
 

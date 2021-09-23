@@ -15,7 +15,7 @@ u0, v0, w0 = 0, 1, 1.05
 tmax, n = 50, 5000
 t = np.linspace(0, tmax, n)
 
-def Lorenz_fun(t, state):
+def lorenz_fun(t, state):
     sigma = 10
     beta = 8/3
     rho = 28
@@ -27,7 +27,7 @@ def Lorenz_fun(t, state):
     return np.array([dx,dy,dz])
 
 # Integrate the Lorenz equations.
-soln = solve_ivp(Lorenz_fun, (0, tmax), (u0, v0, w0),t_eval=t)
+soln = solve_ivp(lorenz_fun, (0, tmax), (u0, v0, w0),t_eval=t)
 x, y, z = soln.y
 
 # sol = odeint(Lorenz_fun,  (u0, v0, w0), t, tfirst=True)
