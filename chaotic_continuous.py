@@ -3,10 +3,9 @@ from scipy.integrate import solve_ivp
 from chaotic_plots import *
 from chaotic_maps import *
 # from chaotic_maps import logistic_fun, chua_fun, duffing_fun, henon_fun, lorenz_fun, L96, rossler_fun, vanderpol_fun
-chaotic_dict = {'Logistic':logistic_fun, 
+chaotic_dict = {
             "Chua's Circuit":chua_fun, 
             'Duffing':duffing_fun,
-            'Henon':henon_fun,
             'Lorenz':lorenz_fun, 
             'Lorenz 96':L96, 
             'Rossler':rossler_fun, 

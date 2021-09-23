@@ -1,15 +1,16 @@
 import numpy as np
 
-def logistic_fun(t, state, r=2):
-    x = state
-    x_n = r * x * (1-x)
-    return np.array([x_n])
+# def logistic_fun(state, r=2):
+#     x = state
+#     x_n = r * x * (1-x)
+#     return np.array([x_n])
 
-def henon_fun(t, state, a=1.4, b=0.3):
-    x, y = state
-    x_n = 1 - a*x**2 + y
-    y_n = b*x
-    return np.array([x_n,y_n])
+# def henon_fun(state, a=1.4, b=0.3):
+#     x, y = state
+#     x_n = 1 - a*x**2 + y
+#     y_n = b*x
+#     return np.array([x_n,y_n])
+
 def chua_fun(t, state, alpha=15.395, beta=28):
     # https://stackoverflow.com/questions/61127919/chuas-circuit-using-python-and-graphing
     R = -1.143
